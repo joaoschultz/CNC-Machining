@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CNC Exemplo</title>
+<style>
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url('./img/Usinagem\ background.jpg');
+    background-size: cover; /* Ajusta para cobrir toda a área */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+        }
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+
+  /* Menu topo preto */
+  header {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  /* Grupo de idiomas */
+  .language-select {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .language-select span {
+    margin-right: 5px;
+  }
+
+  .language-select img {
+    width: 20px;
+    height: 14px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 2px;
+  }
+
+  .language-select img:hover {
+    border-color: #fff;
+  }
+
+  /* Links do menu principal */
+  nav {
+    display: flex;
+    gap: 25px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 8px;
+  }
+
+  nav a.highlight, nav a:hover {
+    background-color: #f7d202; /* amarelo */
+    color: #000;
+    border-radius: 3px;
+  }
+
+  /* Cadastro, Login e ícone */
+  .user-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-weight: 600;
+  }
+
+  .user-actions a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .user-icon {
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+  }
+
+  .user-icon::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1.5px solid white;
+  }
+
+  /* Seção principal com imagem de fundo */
+  main {
+    height: calc(100vh - 50px); /* Altura menos menu */
+    background-image: url('/mnt/data/366d1d88-0250-457b-8777-483413f37cdb.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    backdrop-filter: brightness(0.7);
+  }
+
+  /* Sobreposição para escurecer o fundo (opcional) */
+  main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+  }
+
+  /* Conteúdo textual na frente */
+  .content {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+  }
+
+  .content small {
+    font-size: 14px;
+    opacity: 0.7;
+    text-transform: lowercase;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+    margin: 10px 0 5px 0;
+  }
+
+  .content p {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 600px) {
+    main {
+      padding-left: 20px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 90%;
+    }
+
+    nav {
+      gap: 12px;
+      font-size: 14px;
+    }
+
+    header {
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="language-select">
+    <span>SELECT TO LANGUAGE</span>
+    <img src="https://flagcdn.com/w20/br.png" alt="Português" title="Português" />
+    <img src="https://flagcdn.com/w20/us.png" alt="Inglês" title="Inglês" />
+    <img src="https://flagcdn.com/w20/es.png" alt="Espanhol" title="Espanhol" />
+  </div>
+  
+  <nav>
+    <a href="#">LINHAS/PRODUTOS</a>
+    <a href="#">CATALAGOS</a>
+    <a href="#">LOJA</a>
+    <a href="#">SOBRE</a>
+    <a href="#">CONTATO</a>
+    <a href="#">TRABALHE</a>
+    <a href="#">CONOSCO</a>
+  </nav>
+
+  <div class="user-actions">
+    <a href="#">CADASTRA-SE</a>
+    <a href="#">LOGIN</a>
+    <span class="user-icon" title="Usuário"></span>
+  </div>
+</header>
+
+<main>
+  <div class="content">
+    <small>tecnologia</small>
+    <h1>Vive a experiência com a CNC</h1>
+    <p>Com a engenharia própria a CNC resolve!</p>
+  </div>
+</main>
+
+</body>
+</html>
