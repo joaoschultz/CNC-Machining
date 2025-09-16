@@ -29,20 +29,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
+    padding: 20px 30px;
     font-weight: bold;
     font-size: 14px;
   }
 
   /* Grupo de idiomas */
   .language-select {
+    justify-content: center;
+    margin-left: 500px;
     display: flex;
     align-items: center;
     gap: 8px;
   }
 
   .language-select span {
-    margin-right: 5px;
+    margin: 5px;  
   }
 
   .language-select img {
@@ -59,10 +61,11 @@
 
   /* Links do menu principal */
   nav {
-    display: flex;
+    display: inline;
     gap: 25px;
     font-size: 16px;
     font-weight: 600;
+    
   }
 
   nav a {
@@ -130,7 +133,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    
     z-index: 0;
   }
 
@@ -157,6 +160,13 @@
     opacity: 0.8;
   }
 
+  .opcoes{
+    margin-bottom: 0;
+    margin-top: 10px;
+    margin-left: 300px;
+    position: right;
+    background: rgba(0,0,0,0.65);
+  }
   @media (max-width: 600px) {
     main {
       padding-left: 20px;
@@ -185,21 +195,11 @@
 
 <header>
   <div class="language-select">
-    <span>SELECT TO LANGUAGE</span>
+    <span>SELECT A LANGUAGE</span>
     <img src="https://flagcdn.com/w20/br.png" alt="Português" title="Português" />
     <img src="https://flagcdn.com/w20/us.png" alt="Inglês" title="Inglês" />
     <img src="https://flagcdn.com/w20/es.png" alt="Espanhol" title="Espanhol" />
   </div>
-  
-  <nav>
-    <a href="#">LINHAS/PRODUTOS</a>
-    <a href="#">CATALAGOS</a>
-    <a href="#">LOJA</a>
-    <a href="#">SOBRE</a>
-    <a href="#">CONTATO</a>
-    <a href="#">TRABALHE</a>
-    <a href="#">CONOSCO</a>
-  </nav>
 
   <div class="user-actions">
     <a href="#">CADASTRA-SE</a>
@@ -208,7 +208,21 @@
   </div>
 </header>
 
+<div class="opcoes">
+  <nav>
+    <ul>
+        <a href="produtos.html">LINHAS/PRODUTOS</a>
+        <a href="catalagos.html">CATÁLOGOS</a>
+        <a href="home.html">LOJA</a>
+        <a href="sobre.html">SOBRE</a>
+        <a href="contato.html">CONTATO</a>
+        <a href="trabalheconosco.html">TRABALHE CONOSCO</a>
+    </ul>
+  </nav>
+</div>
+
 <main>
+
   <div class="content">
     <small>tecnologia</small>
     <h1>Vive a experiência com a CNC</h1>
